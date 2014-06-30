@@ -117,6 +117,12 @@ public abstract class AstNode extends Node implements Comparable<AstNode> {
         operatorNames.put(Token.ASSIGN_MOD, "%=");
         operatorNames.put(Token.ASSIGN_BITXOR, "^=");
         operatorNames.put(Token.VOID, "void");
+        // Support E4X toSource methods.
+        operatorNames.put(Token.DOT, ".");
+        operatorNames.put(Token.DOTDOT, "..");
+        operatorNames.put(Token.COLONCOLON, "::");
+        operatorNames.put(Token.XMLATTR, "@");
+        
     }
 
     public static class PositionComparator implements Comparator<AstNode>, Serializable {
